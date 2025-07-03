@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 16
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bd840b706853d4a934ec3199f63a41, type: 3}
+  m_Name: Animancer Settings
+  m_EditorClassIdentifier: 
+  _Data:
+  - rid: 4673965129448030208
+  - rid: 4673965129448030209
+  - rid: 4673965129448030210
+  - rid: 4673965129448030211
+  - rid: 4673965129448030212
+  - rid: 4673965129448030213
+  references:
+    version: 2
+    RefIds:
+    - rid: 4673965129448030208
+      type: {class: AnimancerComponentPreviewSettings, ns: Animancer.Editor.Previews,
+        asm: Kybernetik.Animancer.Lite}
+      data:
+        _RepaintRate: 30
+    - rid: 4673965129448030209
+      type: {class: AnimancerGraphControls, ns: Animancer.Editor, asm: Kybernetik.Animancer.Lite}
+      data:
+        _FrameStep: 0.02
+    - rid: 4673965129448030210
+      type: {class: TransitionPreviewSettings, ns: Animancer.Editor.Previews, asm: Kybernetik.Animancer.Lite}
+      data:
+        _AutoClose: 1
+        _SceneLighting: 0
+        _ShowSkybox: 0
+        _FrameStep: 0.02
+        _SceneEnvironment: {fileID: 0}
+        _Models:
+        - {fileID: 3987400527868405841, guid: 8e3a30446d6463e48adea83d18ce9654, type: 3}
+        - {fileID: 1719597503058426708, guid: 302a42a4eb4d5e540b803b1f86597505, type: 3}
+        - {fileID: 6513445452832035662, guid: a23d96479b822db469d88a5dcf55a54f, type: 3}
+        - {fileID: 7935946544523926545, guid: 7cc7f808e527f6e4f98257acbf47ad87, type: 3}
+        - {fileID: 2059135424237535789, guid: 483568e790e53a243a4f436e924e90b9, type: 3}
+        - {fileID: 6513445452832035662, guid: 56e2123cb573a024485e1c4c94a99299, type: 3}
+        - {fileID: 9126926557282158578, guid: a09170bc25723ba48b6d4d36f6201acd, type: 3}
+        - {fileID: 6292187590335715622, guid: 367c5caf25960d8419724c6c96708538, type: 3}
+        - {fileID: 3238468863098860713, guid: f3cff686a8978764389fcdf5bd50274c, type: 3}
+        - {fileID: 919132149155446097, guid: 7f15caa2bdde644478cf0a6d348aa04c, type: 3}
+    - rid: 4673965129448030211
+      type: {class: SerializableEventSequenceDrawerSettings, ns: Animancer.Editor,
+        asm: Kybernetik.Animancer.Lite}
+      data:
+        _HideEventCallbacks: 0
+    - rid: 4673965129448030212
+      type: {class: AnimationTimeAttributeSettings, ns: Animancer.Units.Editor, asm: Kybernetik.Animancer.Lite}
+      data:
+        showApproximations: 1
+        showNormalized: 1
+        showSeconds: 1
+        showFrames: 1
+    - rid: 4673965129448030213
+      type: {class: GenerateSpriteAnimationsSettings, ns: Animancer.Editor.Tools,
+        asm: Kybernetik.Animancer.Lite}
+      data:
+        _FrameRate: 12
+        _HierarchyPath: 
+        _TargetType:
+          _QualifiedName: UnityEngine.SpriteRenderer, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        _PropertyName: m_Sprite
