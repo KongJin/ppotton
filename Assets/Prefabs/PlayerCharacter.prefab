@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 2506527757749582794}
   - component: {fileID: 5074894834352485232}
   - component: {fileID: 6374544893518380991}
-  - component: {fileID: 6604090301748728924}
+  - component: {fileID: 6560614098092182826}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 8815656395452537351}
   - {fileID: 5074894834352485232}
-  - {fileID: 6604090301748728924}
+  - {fileID: 6560614098092182826}
   - {fileID: 994122598885963956}
   - {fileID: 7494595212884455661}
   - {fileID: 2088573706225111811}
@@ -235,7 +235,7 @@ MonoBehaviour:
   DynamicAirFriction: 2
   KinematicAirAcceleration: 5
   KinematicAirFriction: 2
---- !u!114 &6604090301748728924
+--- !u!114 &6560614098092182826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1268,8 +1268,8 @@ MonoBehaviour:
   Animator: {fileID: 8935632660609184884}
   ApplyTiming: 2
   SyncSettings: 79
-  StateHashes: 00000000e1a8485a40c89b7ec832110d6952c2290d286c4071a5cb4128a98107e65f1427958341e2edc235797d7113856859a80f0fc470060e78689c6566a5ebaa2d979878a1ba3f95b0c8642e7fc833
-  TriggerHashes: 000000003b2dc0471606b3a77a2ecad76d6bf97c
+  StateHashes: 00000000e1a8485a40c89b7ec832110d6952c2290d286c4071a5cb4128a98107e65f1427958341e2edc235797d7113856859a80f0fc470060e78689c6566a5ebaa2d979878a1ba3f95b0c8642e7fc83315b524dc14480a16
+  TriggerHashes: 000000003b2dc0471606b3a7
   TotalWords: 8
 --- !u!1001 &8821719418965513918
 PrefabInstance:

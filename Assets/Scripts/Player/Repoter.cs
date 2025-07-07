@@ -31,6 +31,24 @@ public class Repoter : MonoBehaviour
         transform.position = target.position ;
         float mouseX = Input.GetAxis("Mouse X") ;
         transform.Rotate(0, mouseX, 0);
+
+        if (Input.touchCount == 0)
+            return;
+
+        Touch touch = Input.GetTouch(0);
+
+        // 드래그 중일 때만 deltaPosition.x를 사용
+        if (touch.phase == TouchPhase.Moved)
+        {
+            // 화면 픽셀 이동량 → 회전량
+            float deltaX = touch.deltaPosition.x;
+
+            // Δ회전 = δx × 속도 × 화면 비율 보정
+            float yaw = deltaX * Time.deltaTime;
+
+            // Y축(위에서 볼 때 좌우) 회전 적용
+            transform.Rotate(0f, yaw, 0f, Space.World);
+        }
     }
 
 }

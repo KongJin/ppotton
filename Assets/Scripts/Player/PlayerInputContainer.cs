@@ -10,15 +10,10 @@ public class PlayerInputContainer : NetworkBehaviour
     public Vector3 Movement { get; private set; }
     public float DeltaTime { get; private set; }
 
-    NetworkButtons bottonsPrevious;
-    PlayerInput curInput;
+    private NetworkButtons bottonsPrevious;
+    private PlayerInput curInput;
 
-   
-    public bool GetPressed(MyButtons key)
-    {
-        return curInput.Buttons.WasPressed(bottonsPrevious, key);
-    }
-
+    public bool GetPressed(MyButtons key)=> curInput.Buttons.WasPressed(bottonsPrevious, key);
     public bool GetPress(MyButtons key)=>curInput.Buttons.IsSet(key);
     
     public override void FixedUpdateNetwork()
@@ -26,13 +21,13 @@ public class PlayerInputContainer : NetworkBehaviour
         DeltaTime = Runner.DeltaTime;
         bottonsPrevious = curInput.Buttons;
         if (GetInput(out curInput) == false) return;
+        curInput.Movement *= curInput.Buttons.IsSet(MyButtons.Run) ? 1 : 0.5f;
         Movement = Vector3.Lerp(Movement, curInput.Movement, DeltaTime * 10);
     }
 
-    private void Awake()
+    public override void Spawned()
     {
-        Instance = this;
+        if(Object.HasStateAuthority) Instance = this;
     }
-
 
 }

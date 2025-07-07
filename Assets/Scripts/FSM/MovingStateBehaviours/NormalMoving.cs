@@ -25,8 +25,7 @@ public class NormalMoving : AdvancedStateBehaviour
     }
     protected override void OnFixedUpdate()
     {
-        movementPrevious = PlayerInputContainer.Instance.Movement;
-
+        movementPrevious = PlayerInputContainer.Instance.Movement;        
         kcc.SetInputDirection(PlayerInputContainer.Instance.Movement*0.8f);
         if (movementPrevious != Vector3.zero)
         {
@@ -36,6 +35,7 @@ public class NormalMoving : AdvancedStateBehaviour
             Quaternion smoothed = Quaternion.Slerp(currentRot, targetRot, t);
             kcc.SetLookRotation(smoothed);
         }
+        
         _anim.SetFloat("movement_normal", movementPrevious.magnitude);
     }
 }

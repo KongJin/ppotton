@@ -9,11 +9,17 @@ public class Center : SimulationBehaviour, INetworkRunnerCallbacks {
 
     [SerializeField] GameObject PlayerPrefab;
     [SerializeField] Repoter repoter;
-    [SerializeField] IPlayerInputSensor inputSensor ;
+    [SerializeField] MobileInputSensor mobileScreenSensor;
+    
+    IPlayerInputSensor inputSensor  ;
+    
+
     // creating a instance of the Input Action created
     public void Awake()
     {   
         StartCoroutine(AddCallback());
+    
+
     }
 
     public IEnumerator AddCallback()
@@ -30,7 +36,6 @@ public class Center : SimulationBehaviour, INetworkRunnerCallbacks {
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
         if (inputSensor == null) return;
-
         inputSensor.SetMoveDirection(ref myInput.Movement);
         inputSensor.SetButtonPressing(ref myInput.Buttons);
 
@@ -58,12 +63,12 @@ public class Center : SimulationBehaviour, INetworkRunnerCallbacks {
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         Debug.Log($"OnPlayerJoined player= {player}");
-        UnityEngine.Random.InitState(1234);
+
         if (player == Runner.LocalPlayer)
         {
             var playerObject = Runner.Spawn(PlayerPrefab, new Vector3(0, 1, 0), Quaternion.identity, inputAuthority: Runner.LocalPlayer);
-            repoter.Initialize(playerObject.transform);            
-            inputSensor =  IPlayerInputSensor.GetInputSensor();
+            repoter.Initialize(playerObject.transform);
+ 
         }
 
     }
@@ -113,9 +118,14 @@ public class Center : SimulationBehaviour, INetworkRunnerCallbacks {
         Debug.Log($"Center: OnInputMissing player= {player} NetworkInput= {input}");
     }
 
+    [SerializeField] NPCSpawner npcSpawner;
     public void OnConnectedToServer(NetworkRunner runner) //1. StartGame이 호출되고 성공했을때
     {
         Debug.Log($"Center: OnConnectedToServer");
+        //npcSpawner.MakeNpcs(runner);
+        //inputSensor = mobileScreenSensor;
+        UnityEngine.Random.InitState(1234);
+        inputSensor = new PCInputSensor();
     }
 
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)

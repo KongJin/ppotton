@@ -16,7 +16,6 @@ public enum layerNames
 [RequireComponent(typeof(StateMachineController))]
 public class PlayerAnimController : NetworkBehaviour, IStateMachineOwner, ICustomMachine
 {
-     NetworkButtons bottonsPrevious;
 
     [field: SerializeField] 
     public NetworkMecanimAnimator Animancer { get; private set; }

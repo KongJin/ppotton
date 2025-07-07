@@ -4,14 +4,17 @@ using Fusion;
 public enum MyButtons//Buttons bool¹øÈ£
 {
     
-    Jump = 0,
+    Jump ,
     
-    Attack = 1,
+    Attack ,
+
+    Run,
     
-    ChangeMoveMode = 2,
+    ChangeMoveMode ,
+
 
     //
-    GotoBattleButton = 3,
+    GotoBattleButton ,
 }
 public struct PlayerInput :INetworkInput
 {

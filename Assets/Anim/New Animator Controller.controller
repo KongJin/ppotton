@@ -313,7 +313,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 81e4687e49604c54699f24fc7f563ecc, type: 2}
     m_Threshold: 0.25
-    m_Position: {x: -1, y: 0}
+    m_Position: {x: -0.7, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -321,7 +321,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: fe790479309f2c64aa7851170a1880b9, type: 2}
     m_Threshold: 0.5
-    m_Position: {x: 0, y: 1}
+    m_Position: {x: 0, y: 0.7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -329,7 +329,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5da4091c93a32494686315d35f6679e6, type: 2}
     m_Threshold: 0.75
-    m_Position: {x: 1, y: 0}
+    m_Position: {x: 0.7, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -337,7 +337,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: fd88dbe3bf8520d478bf7bb96f4cdca0, type: 2}
     m_Threshold: 1
-    m_Position: {x: 0, y: -1}
+    m_Position: {x: 0, y: -0.7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
@@ -629,7 +629,7 @@ AnimatorStateMachine:
     m_Position: {x: 380, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7205267799439504872}
-    m_Position: {x: 50, y: 200, z: 0}
+    m_Position: {x: -10, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -993225777349926667}
@@ -638,7 +638,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 250, y: 80, z: 0}
-  m_EntryPosition: {x: 40, y: 130, z: 0}
+  m_EntryPosition: {x: -10, y: -50, z: 0}
   m_ExitPosition: {x: 490, y: 70, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -7205267799439504872}
@@ -967,7 +967,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 38a5392e8a7970043982e714696648b3, type: 2}
-    m_Threshold: 0.5
+    m_Threshold: 0.119427145
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -985,7 +985,7 @@ BlendTree:
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 1
-  m_UseAutomaticThresholds: 1
+  m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
 --- !u!1102 &5542662670262025533
